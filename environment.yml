@@ -1,0 +1,16 @@
+name: root
+channels:
+- defaults
+- conda-forge
+dependencies:
+- cxx-compiler
+- mkl-service
+- pymc3
+- tqdm
+- pandas
+- seaborn
+- jupyterlab
+- pip
+- pip:
+  - cobra
+  - git+https://github.com/pstjohn/emll
