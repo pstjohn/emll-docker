@@ -1,0 +1,3 @@
+[submodule "emll"]
+	path = emll
+	url = https://github.com/pstjohn/emll
