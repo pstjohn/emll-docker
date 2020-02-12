@@ -5,12 +5,16 @@ channels:
 dependencies:
 - cxx-compiler
 - mkl-service
-- pymc3
+- pymc3=3.8
 - tqdm
 - pandas
 - seaborn
 - jupyterlab
 - pip
+- numpy
+- scipy
+- nose
+- cython
 - pip:
   - cobra
   - git+https://github.com/pstjohn/emll
