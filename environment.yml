@@ -3,18 +3,13 @@ channels:
 - defaults
 - conda-forge
 dependencies:
+- mkl
 - cxx-compiler
-- mkl-service
-- pymc3=3.8
-- tqdm
-- pandas
-- seaborn
-- jupyterlab
-- pip
 - numpy
-- scipy
-- nose
-- cython
+- seaborn
+- pip
 - pip:
   - cobra
+  - Theano
+  - pymc3
   - git+https://github.com/pstjohn/emll
