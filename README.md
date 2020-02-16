@@ -6,7 +6,12 @@ The `pip`-installed Theano has proven to be a bit more reliable than the one ava
 
 To run the docker image, the following command mounts the `examples/` directory and launches a jupyter lab instance:
 ```bash
-docker run --mount type=bind,source="$(pwd)"/examples,target=/home/jovyan/examples -p 8888:8888 -it pstjohn/emll start.sh jupyter lab
+docker run --mount type=bind,source="$(pwd)"/examples,target=/home/jovyan/examples \
+    -p 8888:8888 -it pstjohn/emll start.sh jupyter lab
 ```
 
-The image is also runnable on HPC systems with [`singularity`](https://sylabs.io/singularity/).
+The image is also runnable on HPC systems (without sudo) with [`singularity`](https://sylabs.io/singularity/).
+```bash
+singularity build emll.simg docker://pstjohn/emll
+singularity exec emll.simg start.sh jupyter lab --no-browser --ip=0.0.0.0
+```
